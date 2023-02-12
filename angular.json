@@ -98,10 +98,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true,
+            "browsers": "ChromeHeadlessNoSandbox"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
