@@ -1,21 +1,30 @@
 <div class="sign-in-wrapper d-flex justify-content-center min-vh-100 align-items-center">
-  <div class="shadow p-5 rounded">
+  <div class="card shadow p-5 rounded">
+
     <div class="auth-block">
-      <h3>Sign In</h3>
+
+      <!-- sign in header -->
+      <h3 class="sign-in-header">Sign In</h3>
+
+      <!-- user name input -->
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Username" #userName required>
       </div>
+      
+      <!-- password input -->
       <div class="form-group">
         <input type="password" class="form-control" placeholder="Password" #userPassword required>
       </div>
 
       <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
+      <div class="form-group">
         <input type="button" class="btn btn-primary form-control" value="Log in"
           (click)="authService.SignIn(userName.value, userPassword.value)"
           (keydown.enter)="authService.SignIn(userName.value, userPassword.value)">
       </div>
-      <div class="form-group">
+
+      <!-- or option -->
+      <div class="form-group m-0 p-2 center">
         <span class="or"><span class="or-inner">Or</span></span>
       </div>
 
@@ -34,10 +43,14 @@
           Log in with Google
         </button>
       </div>
+
+      <!-- forgot password -->
       <div class="forgotPassword">
         <a routerLink="/forgot-password">Forgot Password?</a>
       </div>
     </div>
+
+    <!-- redirect to signup -->
     <div class="redirectToLogin">
       <span>Don't have an account?<a class="redirect" routerLink="/sign-up"> Sign Up</a></span>
     </div>
