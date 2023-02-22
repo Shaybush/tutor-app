@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { VerifyEmailComponent } from './verify-email.component';
+import { AuthService } from 'src/app/core/api/service/auth.service';
 
 describe('VerifyEmailComponent', () => {
   let component: VerifyEmailComponent;
@@ -8,7 +9,9 @@ describe('VerifyEmailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerifyEmailComponent ]
+      declarations: [ VerifyEmailComponent ],
+      schemas:[NO_ERRORS_SCHEMA],
+      imports:[AuthService]
     })
     .compileComponents();
 

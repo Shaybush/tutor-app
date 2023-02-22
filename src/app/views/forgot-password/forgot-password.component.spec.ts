@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ForgotPasswordComponent } from './forgot-password.component';
@@ -8,7 +9,9 @@ describe('ForgotPasswordComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForgotPasswordComponent ]
+      declarations: [ ForgotPasswordComponent ],
+      schemas:[NO_ERRORS_SCHEMA],
+      imports:[]
     })
     .compileComponents();
 

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { DashboardComponent } from './dashboard.component';
+import { AuthService } from 'src/app/core/api/service/auth.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,7 +9,10 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DashboardComponent ],
+      schemas:[NO_ERRORS_SCHEMA],
+      imports:[AuthService],
+      providers:[AuthService]
     })
     .compileComponents();
 

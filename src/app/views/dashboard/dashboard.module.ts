@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardTableModule } from "./dashboard-table/dashboard-table.module";
 import { DashboardSearchModule } from "./dashboard-search/dashboard-search.module";
 import { Route, RouterModule } from '@angular/router';
+import { AuthService } from 'src/app/core/api/service/auth.service';
 
 const routes: Route[] = [
   {
@@ -20,7 +21,8 @@ const routes: Route[] = [
     CommonModule,
     RouterModule.forChild(routes),
     DashboardTableModule,
-    DashboardSearchModule
-  ]
+    DashboardSearchModule,
+  ],
+  providers:[AuthService]
 })
 export class DashboardModule { }

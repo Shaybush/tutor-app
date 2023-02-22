@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { DashboardSearchComponent } from './dashboard-search.component';
 
 describe('DashboardSearchComponent', () => {
@@ -8,7 +8,9 @@ describe('DashboardSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardSearchComponent ]
+      declarations: [ DashboardSearchComponent ],
+      schemas:[NO_ERRORS_SCHEMA],
+      imports:[]
     })
     .compileComponents();
 
