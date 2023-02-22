@@ -1,0 +1,9 @@
+@import "../../../style/shared/variables.scss";
+
+.dashboard-wrapper{
+    .dashboard{
+        &-header-navbar{
+            background: $purple;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import "../../../style/shared/variables.scss";
+
+.sign-in-wrapper{
+    .sign-in{
+        &-header{
+            color: $purple;
+        }
+    }
+}
