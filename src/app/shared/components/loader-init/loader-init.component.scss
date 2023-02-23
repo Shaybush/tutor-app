@@ -5,12 +5,14 @@
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 9999999;
     font-family: "Raleway",
       sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: $bg-light;
   
     h2 {
       font-size: 40px;
@@ -26,6 +28,7 @@
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 9999999;
       display: block;
       background: $bg-pink;
     }
