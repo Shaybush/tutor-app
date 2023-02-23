@@ -52,3 +52,17 @@ input[type=number]:focus,
   justify-content: center;
   align-items: center;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px $black;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: $purple;
+  outline: 1px solid $black;
+  border-radius: 20px;
+}
