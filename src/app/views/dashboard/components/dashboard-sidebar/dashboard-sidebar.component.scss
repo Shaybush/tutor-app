@@ -1,0 +1,13 @@
+@import "../../../../../style/shared/variables.scss";
+
+.dashboard-sidebar-wrapper {
+    position: sticky;
+    top: 58px;
+    left: 0;
+    z-index: 999;
+    a.active {
+        span{
+            color: $purple;
+        }
+    }
+}

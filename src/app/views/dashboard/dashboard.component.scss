@@ -1,9 +1,19 @@
 @import "../../../style/shared/variables.scss";
 
 .dashboard-wrapper{
-    .dashboard{
-        &-header-navbar{
+    .dashboard-header{
+        &-navbar{
             background: $purple;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        &-sidebar{
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 999;
         }
     }
 }
