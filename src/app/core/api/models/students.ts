@@ -1,7 +1,8 @@
 export interface Student {
-    id: string;
-    email: string;
-    displayName: string;
-    photoURL: string;
-    emailVerified: boolean;
+    id: string,
+    accumulator: number;
+    birtdate: number;
+    fixed_payment: number;
+    group: number;
+    name: string;
 }

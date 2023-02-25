@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Student } from 'src/app/core/api/models/students';
 import { StudentsService } from 'src/app/core/api/service/students.service';
 
@@ -14,14 +15,12 @@ export class DashboardStudentsComponent implements OnInit {
   ngOnInit(): void {
     this.studentServ.getStudentList().subscribe(res =>{
       this.students = res.map(student =>{
-        console.log(student)
         return{
           id : student.payload.doc.id,
           ...student.payload.doc.data() as {}
         } as Student;
       })
     })
-
   }
 
 }
