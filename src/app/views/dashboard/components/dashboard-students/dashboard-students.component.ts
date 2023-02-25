@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/core/api/models/students';
+import { StudentsService } from 'src/app/core/api/service/students.service';
 
 @Component({
   selector: 'app-dashboard-students',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-students.component.scss']
 })
 export class DashboardStudentsComponent implements OnInit {
-
-  constructor() { }
+  students !: Student[]
+  constructor(private studentServ: StudentsService) { }
 
   ngOnInit(): void {
+    this.studentServ.getStudentList().subscribe(res =>{
+      this.students = res.map(student =>{
+        console.log(student)
+        return{
+          id : student.payload.doc.id,
+          ...student.payload.doc.data() as {}
+        } as Student;
+      })
+    })
+
   }
 
 }
