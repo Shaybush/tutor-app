@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable, NgZone, OnInit } from '@angular/core';
 import { User } from '../models/user';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
 export class AuthService {
   userData: any; // Save logged in user data
   constructor(
-    public afs: AngularFirestore, // Inject Firestore service
-    public afAuth: AngularFireAuth, // Inject Firebase auth service
-    public router: Router,
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    private afs: AngularFirestore, // Inject Firestore service
+    private afAuth: AngularFireAuth, // Inject Firebase auth service
+    private router: Router,
+    private ngZone: NgZone // NgZone service to remove outside scope warning
   ) {
 
     /* Saving user data in localstorage when 
@@ -32,6 +32,8 @@ export class AuthService {
       }
     });
   }
+
+  
 
   // Sign in with email/password
   SignIn(email: string, password: string): Promise<void> {
