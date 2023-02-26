@@ -14,7 +14,8 @@
 
     <!-- Main content -->
     <main role="main" class="col-md-9">
-      <router-outlet></router-outlet>
+      <div *ngIf="loadingInPage">loading ....</div>
+      <router-outlet *ngIf="!loadingInPage"></router-outlet>
     </main>
   </div>
 </div>
