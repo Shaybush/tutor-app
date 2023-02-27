@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Student } from 'src/app/core/api/models/students';
-import { StudentsService } from 'src/app/core/api/service/students.service';
 
 @Component({
   selector: 'app-dashboard-students',
@@ -12,29 +10,17 @@ import { StudentsService } from 'src/app/core/api/service/students.service';
 export class DashboardStudentsComponent implements OnInit {
   students!: Student[];
 
-  constructor(
-    
-    private route: ActivatedRoute
-  ) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.data.subscribe((res) => {
-      console.log(res['studentsData']);
-      this.students = res['studentsData'].map((student: { payload: { doc: { id: any; data: () => {}; }; }; }) => {
-        return {
-          id: student.payload.doc.id,
-          ...(student.payload.doc.data() as {}),
-        } as Student;
-      });
-    });
-    // this.studentServ.getStudentList().subscribe(res =>{
-    //   console.log(res)
-    //   this.students = res.map(student =>{
-    //     return{
-    //       id : student.payload.doc.id,
-    //       ...student.payload.doc.data() as {}
-    //     } as Student;
-    //   })
-    // })
+    let student_res = this.route.snapshot.data['studentsData']
+
+    // todo - make it model 
+    this.students = student_res.map((student: { payload: { doc: { id: any; data: () => {}; }; }; }) => {
+      return {
+        id: student.payload.doc.id,
+        ...(student.payload.doc.data()),
+      } as Student;
+    })
   }
 }

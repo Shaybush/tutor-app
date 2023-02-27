@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/core/api/service/auth.service';
 import {
   NavigationCancel,
   NavigationEnd,
@@ -12,19 +11,24 @@ import {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent{
+export class DashboardComponent {
   // constructor(public authService: AuthService) { }
 
   loadingInPage: boolean = true;
+
   constructor(public router: Router) {
-    this.router.events.subscribe(ev => {
-      if (ev instanceof NavigationStart) {
+    this.router.events.subscribe(event => {
+
+      // navigation start
+      if (event instanceof NavigationStart) {
         this.loadingInPage = true;
       }
+
+      // navigation end
       if (
-        ev instanceof NavigationEnd ||
-        ev instanceof NavigationCancel ||
-        ev instanceof NavigationError
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
       ) {
         this.loadingInPage = false;
       }
