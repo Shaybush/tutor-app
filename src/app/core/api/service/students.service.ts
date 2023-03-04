@@ -12,6 +12,6 @@ export class StudentsService {
   getStudentList(): Observable<DocumentChangeAction<unknown>[]> {
     return this.afs
       .collection("students")
-      .snapshotChanges();
+      .snapshotChanges()
   }
 }

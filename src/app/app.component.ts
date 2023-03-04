@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +8,7 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   loading: boolean = true;
-
+  
   ngOnInit(){
     setTimeout(()=>{
       this.loading = false;
