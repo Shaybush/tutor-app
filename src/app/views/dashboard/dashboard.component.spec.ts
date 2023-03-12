@@ -11,8 +11,9 @@ describe('DashboardComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
       schemas:[NO_ERRORS_SCHEMA],
-      imports:[AuthService],
-      providers:[AuthService]
+      providers:[
+        AuthService
+      ]
     })
     .compileComponents();
 
