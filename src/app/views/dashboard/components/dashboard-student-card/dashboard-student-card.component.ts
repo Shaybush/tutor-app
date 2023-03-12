@@ -12,7 +12,6 @@ export class DashboardStudentCardComponent implements OnInit {
   @Input() student !: Student;
   studentClass!: string;
   ngOnInit(): void {
-    console.log(this.student)
     this.studentClass = arrayClassHebrew(this.student.group);
   }
 }
