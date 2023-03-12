@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { VerifyEmailComponent } from './verify-email.component';
-import { AuthService } from 'src/app/core/api/service/auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 describe('VerifyEmailComponent', () => {
   let component: VerifyEmailComponent;
@@ -11,7 +12,9 @@ describe('VerifyEmailComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ VerifyEmailComponent ],
       schemas:[NO_ERRORS_SCHEMA],
-      imports:[AuthService]
+      imports:[
+        AngularFireModule.initializeApp(environment.firebaseConfig)
+      ]
     })
     .compileComponents();
 
