@@ -1,0 +1,14 @@
+@import "/src/style/shared/variables.scss";
+
+.dashboard-student-card-wrapper {
+    .card {
+        direction: rtl;
+        text-align: right;
+        background: $bg-light;
+        cursor: pointer;
+
+        &-header {
+            text-align: center;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardStudentsComponent } from './dashboard-students.component';
 import { Route, RouterModule } from '@angular/router';
 import { StudentsResolver } from 'src/app/core/api/resolvers/students.resolver';
+import { DashboardStudentCardModule } from '../dashboard-student-card/dashboard-student-card.module';
 
 const routes: Route[] = [
   {
@@ -20,7 +21,8 @@ const routes: Route[] = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    DashboardStudentCardModule
   ]
 })
 export class DashboardStudentsModule { }
