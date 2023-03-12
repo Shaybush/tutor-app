@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardStatisticsComponent } from './dashboard-statistics.component';
@@ -8,7 +9,10 @@ describe('DashboardStatisticsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardStatisticsComponent ]
+      declarations: [ DashboardStatisticsComponent ],
+      schemas :[
+        NO_ERRORS_SCHEMA
+      ]
     })
     .compileComponents();
 

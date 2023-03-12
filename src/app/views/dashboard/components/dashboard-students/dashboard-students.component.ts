@@ -16,7 +16,7 @@ export class DashboardStudentsComponent implements OnInit {
     let student_res = this.route.snapshot.data['studentsData']
 
     // todo - make it model 
-    this.students = student_res.map((student: { payload: { doc: { id: any; data: () => {}; }; }; }) => {
+    this.students = student_res?.map((student: { payload: { doc: { id: any; data: () => {}; }; }; }) => {
       return {
         id: student.payload.doc.id,
         ...(student.payload.doc.data()),
