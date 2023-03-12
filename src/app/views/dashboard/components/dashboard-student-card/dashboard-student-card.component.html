@@ -1,8 +1,16 @@
-<div class="card">
-  <h5 class="card-header">Featured</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="dashboard-student-card-wrapper">
+  <div class="card p-0">
+    <h5 class="card-header p-2">Student - {{student.name}}</h5>
+    <div class="card-body p-2">
+      <h6>
+        כיתה {{studentClass}}
+      </h6>
+      <span>
+        מחיר עבור שיעור - {{student.fixed_payment}}
+      </span>
+      <h4 class="text-center mt-2">
+        {{student.accumulator}}
+      </h4>
+    </div>
   </div>
 </div>

@@ -1,0 +1,35 @@
+// color
+.text {
+
+    &-primary,
+    &-primary-before::before,
+    &-primary-after::after {
+        color: $primary !important;
+    }
+}
+
+// color -end
+
+//background
+.bg {
+
+    &-primary,
+    &-primary-before::before,
+    &-primary-after::after {
+        background: $primary !important;
+    }
+}
+
+//background - end
+
+//border
+.border {
+
+    &-primary,
+    &-primary-before::before,
+    &-primary-after::after {
+        border-color: $primary !important;
+    }
+}
+
+//border - end

@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lobster&display=swap');
+@import "./colors-utils.scss";
 * {
-  color: $white;
+  box-sizing: border-box;
 }
 
 body {
   background: $bg-dark;
+  color: $white;
+  direction: rtl;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 
 a {
@@ -26,15 +32,21 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-  box-shadow: inset 0 -3px 0 $purple;
+  box-shadow: inset 0 -3px 0 $primary;
   border: none;
 }
 
 .card {
-  background: $bg-light;
-
+  background: $bg-light !important;
+  border: 1px solid $primary-light !important;
+  border-radius: 8px !important;
+  transition: 800ms ease;
+  &:hover{
+    transform: scale(0.95);
+  }
   &-header {
     padding: 12px 4px;
+    background: $bg-primary !important;
   }
 
   &-body {
@@ -56,13 +68,13 @@ input[type=number]:focus,
 ::-webkit-scrollbar {
   width: 8px;
 }
- 
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px $black;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background-color: $purple;
+  background-color: $primary;
   outline: 1px solid $black;
   border-radius: 20px;
 }

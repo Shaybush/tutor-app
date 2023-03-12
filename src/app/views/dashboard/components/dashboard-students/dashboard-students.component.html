@@ -1,4 +1,7 @@
-<span *ngFor="let stud of students">
-    {{stud | json}}
-</span>
-<app-dashboard-student-card></app-dashboard-student-card> 
+<div class="dashboard-students-wrapper">
+    <div class="row p-2">
+        <div class="col-md-4 p-1" *ngFor="let stud of students">
+            <app-dashboard-student-card [student]="stud"></app-dashboard-student-card>
+        </div>
+    </div>
+</div>
