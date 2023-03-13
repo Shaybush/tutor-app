@@ -6,6 +6,12 @@
         text-align: right;
         background: $bg-light;
         cursor: pointer;
+        border: 1px solid $primary-light !important;
+        border-radius: 8px !important;
+
+        &:hover {
+            transform: scale(0.95);
+        }
 
         &-header {
             text-align: center;

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import "./colors-utils.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -8,8 +9,8 @@ body {
   background: $bg-dark;
   color: $white;
   direction: rtl;
-  font-family: 'Inter', sans-serif;
-  font-family: 'Lobster', cursive;
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -38,12 +39,8 @@ input[type=number]:focus,
 
 .card {
   background: $bg-light !important;
-  border: 1px solid $primary-light !important;
-  border-radius: 8px !important;
   transition: 800ms ease;
-  &:hover{
-    transform: scale(0.95);
-  }
+
   &-header {
     padding: 12px 4px;
     background: $bg-primary !important;
