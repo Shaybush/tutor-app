@@ -5,7 +5,9 @@
   </header>
 
   <!-- loading -->
-  <div *ngIf="loadingInPage">loading ....</div>
+  <div *ngIf="loadingInPage">
+    <app-line-loader></app-line-loader>
+  </div>
 
   <!-- Sidebar navigation -->
   <div class="container-fluid">

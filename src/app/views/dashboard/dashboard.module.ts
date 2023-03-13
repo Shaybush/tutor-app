@@ -4,11 +4,11 @@ import { DashboardComponent } from './dashboard.component';
 import { Route, RouterModule } from '@angular/router';
 import { AuthService } from 'src/app/core/api/service/auth.service';
 import { DashboardSidebarModule } from './components/dashboard-sidebar/dashboard-sidebar.module';
-
+import { LineLoaderModule } from "../../shared/components/line-loader/line-loader.module"
 const routes: Route[] = [
   {
     path: '',
-    component: DashboardComponent,    
+    component: DashboardComponent,
     children: [
       {
         path: 'profile',
@@ -33,7 +33,8 @@ const routes: Route[] = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    DashboardSidebarModule
+    DashboardSidebarModule,
+    LineLoaderModule
   ],
   providers: [AuthService]
 })

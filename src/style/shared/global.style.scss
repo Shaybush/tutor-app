@@ -6,11 +6,11 @@
 }
 
 body {
-  background: $bg-dark;
-  color: $white;
-  direction: rtl;
-  text-align: right;
-  font-family: 'Open Sans', sans-serif;
+  background: $bg-dark !important;
+  color: $white !important;
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 a {
@@ -58,7 +58,7 @@ input[type=number]:focus,
 
 .center {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
 }
 
@@ -71,7 +71,7 @@ input[type=number]:focus,
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $primary;
-  outline: 1px solid $black;
+  background-color: $primary !important;
+  outline: 1px solid $black !important;
   border-radius: 20px;
 }
