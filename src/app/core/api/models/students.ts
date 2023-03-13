@@ -3,6 +3,7 @@ export interface Student {
     accumulator: number;
     birtdate: number;
     fixed_payment: number;
+    phone_number: string;
     group: number;
     name: string;
 }

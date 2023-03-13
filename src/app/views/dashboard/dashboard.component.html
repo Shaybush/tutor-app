@@ -1,26 +1,26 @@
 <div class="dashboard-wrapper">
-<!-- Top navigation -->
-<header class="dashboard-header-navbar navbar center shadow">
-  <h3 class="text-white">navbar</h3>
-</header>
+  <!-- Top navigation -->
+  <header class="dashboard-header-navbar navbar center shadow">
+    <h3 class="text-white">navbar</h3>
+  </header>
 
-<!-- Sidebar navigation -->
-<div class="container-fluid">
-  <div class="row">
-    
-    <div class="col-md-3 p-0">
-      <app-dashboard-sidebar></app-dashboard-sidebar>
+  <!-- loading -->
+  <div *ngIf="loadingInPage">loading ....</div>
+
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-3 p-0">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+
+      <!-- Main content -->
+      <main role="main" class="col-md-9">
+
+        <!-- outlet -->
+        <router-outlet *ngIf="!loadingInPage"></router-outlet>
+      </main>
     </div>
-
-    <!-- Main content -->
-    <main role="main" class="col-md-9">
-
-      <!-- loading -->
-      <div *ngIf="loadingInPage">loading ....</div>
-
-      <!-- outlet -->
-      <router-outlet *ngIf="!loadingInPage"></router-outlet>
-    </main>
   </div>
-</div>
 </div>
